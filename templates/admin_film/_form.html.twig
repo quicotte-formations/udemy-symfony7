@@ -1,0 +1,17 @@
+{{ form_start(form) }}
+    <div class="row">
+        <div class="col-4">{{ form_row(form.titre)}}</div>
+        <div class="col-4">{{ form_row(form.annee)}}</div>
+        <div class="col-4">{{ form_row(form.duree)}}</div>
+    </div>
+    <div class="row">
+        <div class="col-12">{{ form_row(form.synopsis)}}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">{{ form_row(form.genres)}}</div>
+        <div class="col-3">{{ form_row(form.pays)}}</div>
+        <div class="col-3">{{ form_row(form.realisateurs)}}</div>
+        <div class="col-3">{{ form_row(form.acteurs)}}</div>
+    </div>
+    <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

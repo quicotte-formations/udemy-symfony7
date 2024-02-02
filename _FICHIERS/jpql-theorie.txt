@@ -1,0 +1,22 @@
+Opérateurs d'aggrégation: COUNT, MAX, SUM, AVG
+Where: filtrage: ops = <> < <= > >= IN NOT IN BETWEEN
+Order by:
+Jointures: et left join
+Sous-requêtes: IN, NOT IN
+Ensembles:  Union avec OR, IN et sous-requete
+            Intersection avec AND, IN et sous-requete
+            Différence avec AND NOT IN et sous-requete
+Group by / Having
+Pagination
+Paramètres
+
+
+1. Tous les pays
+
+2. Tous les genres, triés par ordre alphabétique
+
+3. Tous les films du genre horreur
+
+4. Les acteurs du film 'The Thing'
+
+5. Tous les réalisateurs du film Dracula

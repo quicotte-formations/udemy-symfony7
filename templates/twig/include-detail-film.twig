@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>{{ film.titre }}</title>
+    {% include '_INLINE_STYLE.html.twig' %}
+</head>
+<body>
+{% include '_MENU.html.twig' %}
+<main>
+    <h1>{{ film.titre }}</h1>
+    <span>{{ film.synopsis }}</span>
+</main>
+{% include '_PIED.html.twig' %}
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% set livres = [
+    {'titre': '1984', 'auteur': 'George Orwell'},
+    {'titre': 'Le Meilleur des mondes', 'auteur': 'Aldous Huxley'},
+    {'titre': 'Fahrenheit 451', 'auteur': 'Ray Bradbury'},
+    {'titre': 'Animal Farm', 'auteur': 'George Orwell'}
+] %}
+
+{% set livresOrwell = livres | filter(livre => livre.auteur == 'George Orwell') %}
+
+{# Après l'application du filtre, livresOrwell contiendra :
+   [
+     {'titre': '1984', 'auteur': 'George Orwell'},
+     {'titre': 'Animal Farm', 'auteur': 'George Orwell'}
+   ]
+#}
+
+{% for livre in livresOrwell %}
+    - {{ livre.titre }} par {{ livre.auteur }}
+{% endfor %}
+
+
+{% set livres = [
+    {'titre': '1984', 'auteur': 'George Orwell'},
+    {'titre': 'Le Meilleur des mondes', 'auteur': 'Aldous Huxley'},
+    {'titre': 'Fahrenheit 451', 'auteur': 'Ray Bradbury'},
+    {'titre': 'Animal Farm', 'auteur': 'George Orwell'}
+] %}
+
+{% set livresTries = livres | sort((a, b) => a.titre > b.titre) %}
+
+{#
+Après le tri, livresTries contiendra :
+  [
+    {'titre': '1984', 'auteur': 'George Orwell'},
+    {'titre': 'Animal Farm', 'auteur': 'George Orwell'},
+    {'titre': 'Fahrenheit 451', 'auteur': 'Ray Bradbury'},
+    {'titre': 'Le Meilleur des mondes', 'auteur': 'Aldous Huxley'}
+  ]
+#}
+
+{% for livre in livresTries %}
+    - {{ livre.titre }} par {{ livre.auteur }}
+{% endfor %}
+
+
+
+
+{% set livres = [
+    {'titre': '1984', 'auteur': 'George Orwell'},
+    {'titre': 'Le Meilleur des mondes', 'auteur': 'Aldous Huxley'},
+    {'titre': 'Fahrenheit 451', 'auteur': 'Ray Bradbury'},
+    {'titre': 'Animal Farm', 'auteur': 'George Orwell'}
+] %}
+
+{% set titresAuteurs = livres | map(livre => livre.titre ~ ' (' ~ livre.auteur ~ ')') %}
+
+{#
+Après l'application du filtre map, titresAuteurs contiendra :
+  [
+    '1984 (George Orwell)',
+    'Le Meilleur des mondes (Aldous Huxley)',
+    'Fahrenheit 451 (Ray Bradbury)',
+    'Animal Farm (George Orwell)'
+  ]
+#}

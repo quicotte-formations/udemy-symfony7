@@ -1,0 +1,9 @@
+{{ form_start(form) }}
+<div class="row">
+    <div class="col-4">{{ form_row(form.libelle) }}</div>
+    <div class="col-4">{{ form_row(form.filmsInterpretes) }}</div>
+    <div class="col-4">{{ form_row(form.filmsRealises) }}</div>
+</div>
+
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

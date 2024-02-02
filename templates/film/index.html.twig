@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <style>
+        tbody tr:hover{
+            background-color: black;
+            color: ivory;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <h1>Filtre</h1>
+    <div>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+    <h1>{{ films | length }} films trouvés</h1>
+    <table>
+        <thead>
+        <th>Titre</th>
+        <th>Genres</th>
+        <th>Pays</th>
+        <th>Annee</th>
+        <th>Réalisateurs</th>
+        </thead>
+        <tbody>
+        {% for film in films %}
+            <tr>
+                <td>{{ film.titre }}</td>
+                <td>{{ film.genres | join(', ') }}</td>
+                <td>{{ film.pays  | join(', ') }}</td>
+                <td>{{ film.annee  | join(', ') }}</td>
+                <td>{{ film.realisateurs  | join(', ') }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

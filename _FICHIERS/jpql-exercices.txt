@@ -1,0 +1,36 @@
+Jointures
+---------
+
+0. Créer un contrôleur pour nos exercices : JPQLController
+
+1. Tous les pays
+
+2. Tous les genres, triés par ordre alphabétique
+
+3. Tous les films du genre 'Horreur-Epouvante'
+
+4. Les acteurs du film 'The Thing' de 1982
+
+5. Tous les films realisés par 'Woody Allen', du genre 'Comédie'
+
+6. Les réalisateurs ayant tourné des films avec l'acteur 'Bruce Lee'
+
+Fonctions d'aggrégation
+-----------------------
+
+7. Le nombre de films interprétés par Eddie Murphy
+
+8. L'année minimum et maximum des films de 'Science-Fiction'
+
+9. Le nombre de films de genre 'Horreur-Epouvante', leur année mini et maxi, leur durée moyenne et la somme de leur durée
+
+Aggrégation avec Group by et Having:
+------------------------------------
+
+10. Le nombre de films groupé par pays ( donc champs: nom_pays et total )
+
+11. Le nombre de films pour les réalisateurs ayant réalisé plus de 20 films, triés par ordre décroissant
+
+12. Le nombre de films par genre, pour les films interprétés par Eddie Murphy
+
+

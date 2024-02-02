@@ -1,0 +1,25 @@
+<table>
+    <thead>
+    <tr>
+        <th>Nom du produit</th>
+        <th>Quantité</th>
+        <th>Prix unitaire</th>
+        <th>Prix total</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% set prixTotalTousProduits = 0 %}
+    {% for produit in produits %}
+        <tr>
+            <td>{{ produit.nom }}</td>
+            <td>{{ produit.quantite }}</td>
+            <td>{{ produit.prix_unitaire }}</td>
+            {% set prixTotalProduit = produit.quantite * produit.prix_unitaire %}
+            <td>{{ prixTotalProduit }}</td>
+            {% set prixTotalTousProduits = prixTotalTousProduits + prixTotalProduit %}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<p>Prix total de tous les produits : {{ prixTotalTousProduits }}</p>

@@ -1,0 +1,10 @@
+<nav>
+    <a href="{{ path('liste-films') }}">Films</a>
+    <a href="{{ path('liste-films') }}">Animés</a>
+    {% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+        <a href="{{ path('app_login') }}">Connexion</a>
+        <a href="{{ path('app_register') }}">Inscription</a>
+    {% else %}
+        <a href="{{ path('app_logout') }}">Déconnexion</a>
+    {% endif %}
+</nav>

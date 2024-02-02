@@ -1,0 +1,85 @@
+TWIG:
+
+BALISES :
+---------
+
+- include + controleur
+- block + extends
+- embed + macro ( vite fait )
+
+- for else endfor
+- if elif else endif
+
+- set
+
+FILTRES :
+---------
+
+capitalize      Met 1ère lettre en maj
+date            Formatte un Datetime
+date_modify     Ajoute un intervalle à une date
+default         Renvoie une valeur par défaut si ce qui est à gauche est vide
+escape          Echape le texte vers un certain format ( html,css,js,url,html attributs )
+filter          Filtrage utilisant une lambda
+first           Renvoie le 1er élément du tableau ou la 1ère lettre du string
+format          Remplace dans un string un mot par un autre
+format_currency Formate un nombre -> devise
+format_number   Formate un nombre ( nb chiffres après virgule, ... )
+join            Tableau -> string avec séparateur
+split           String -> tableau avec séparateur
+json_encode     Conversion vers JSON
+keys            Renvoie clés d'un tableau associatif
+last            Renvoie dernier élem d'un tableau ou dernière lettre string
+length          Taille tableau ou string
+lower           Minsucules
+upper           Majuscules
+map             Transforme tableau avec lambda
+sort            Trie un tableau avec / sans lambda
+merge           Créer 1 tableau à partir de 2 autres
+replace         Remplacement comme printf
+reverse         Inverse tableau / string
+round           Arrondi
+slice           Renvoie une partie d'un tableau
+title           Renoive le string avec maj pour chaque mot
+trim            Enlève espaces superflus
+url_encode      Encode pour urls
+
+FONCTIONS :
+-----------
+
+cycle           Renvoie alternativement chacun des éléments d'un tableau en fonction d'un indice
+date            Conversion vers un date pour permettre de comparer 2 dates
+dump            Debug
+max             Max d'un tableau de nombres
+min             Min d'un tableau de nombres
+random          Tire aléatoirement un élément d'un tab, ou un entier entre un min et un max
+range           Tire une liste d'entiers entre un min et un max, avec éventuellement un step
+
+TESTS :
+-------
+and,or,not
+==, !=, <, >, >=, <=
+in(tab)         app
+is defined      varibale est définie
+is empty        variable est chaine vide, tableau vide, false ou null
+is even         entier est pair
+is odd          entier est impair
+
+OPERATEURS :
+------------
++, -, /, %, /, *, **
+2..5            crée un tableau de 2 à 5
+~               concaténation (avec conversion auto vers string si nécessaire)
+.               accède à l'attribut d'un objet ou à son getter
+?:              opérateur ternaire
+foo ?? 'no'     renvoie foo si défini et non null, sinon renvoie 'no'
+
+
+
+
+
+
+
+
+
+

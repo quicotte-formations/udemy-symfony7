@@ -1,0 +1,7 @@
+0. Créer un nouveau controller QBController
+
+1. Les pays, triés par ordre alphabétique
+
+2. Les films d'action
+
+3. Le nombre et la durée moyenne de films pour chaque genre, triés par quantité décroissante

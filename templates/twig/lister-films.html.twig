@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% dump films %}
+    {% dump 1000 | length %}
+    {% for film in films %}
+        <article>
+            {{ film.titre }}
+            {{ film.annee }}
+        </article>
+    {% endfor %}
+{% endblock %}

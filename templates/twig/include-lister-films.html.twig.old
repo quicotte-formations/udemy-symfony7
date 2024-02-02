@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Tous les films</title>
+    {% include '_INLINE_STYLE.html.twig' %}
+</head>
+<body>
+{% include '_MENU.html.twig' %}
+<main>
+    <h1>Films</h1>
+    {% for film in films %}
+        {% include '_MINIATURE-FILM.html.twig' %}
+    {% endfor %}
+</main>
+{% include '_PIED.html.twig' %}
+</body>
+</html>

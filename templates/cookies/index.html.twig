@@ -1,0 +1,22 @@
+<html>
+<head>
+    <style>
+        .dracula{
+            background-color: black;
+            color: red;
+        }
+
+        .frankenstein{
+            background-color: green;
+        }
+    </style>
+</head>
+<body class="{{ app.request.cookies.get('theme') }}">
+<h1>
+    VALEUR DU THEME: {{ app.request.cookies.get('theme') }}
+</h1>
+</body>
+</html>
+
+
+
